@@ -1,27 +1,30 @@
-# Reconhecimento Atacantes
+📌 Resumo das Melhorias Implementadas
 
-Projeto usado para exemplificar o uso do [AWS Rekognition](https://docs.aws.amazon.com/pt_br/rekognition/latest/APIReference/API_CompareFaces.html) na detecção de rosto em fotos.
+-Tratamento de Erros Aprimorado
+Captura de erros específicos (AWS, imagens inválidas, arquivos não encontrados).
+Mensagens claras para facilitar o diagnóstico.
 
-## Pré requisitos
+-Configuração Flexível via Linha de Comando
+Parâmetros dinâmicos (--source, --target, --threshold).
+Nome personalizável para o arquivo de saída (--output).
 
-- Python
-- Uv
-- Conta AWS
+-Validação de Imagens
+Verificação automática de arquivos corrompidos ou incompatíveis.
 
-## Configuração do ambiente
+-Tipagem Forte e Documentação
+Type hints para melhor autocompletar e detecção de erros.
+Docstrings detalhadas em todas as funções.
 
-É necessário configurar um usuário no IAM com acesso ao serviço Rekognition.
+-Logs Estruturados
+Registro em arquivo (app.log) e console.
+Timestamp e níveis de severidade (INFO, ERROR).
 
-## Instalação
+-Visualização Aprimorada
+Legendas com contagem de rostos e porcentagem de similaridade.
 
-Para instalar as dependências do projeto utilize o comando:
+-Testabilidade
+Código refatorado para facilitar testes unitários.
+Exemplo com pytest incluído.
 
-```sh
-uv install
-```
-
-## Execução
-
-```
-uv run main.py
-```
+-Segurança
+Credenciais da AWS gerenciadas via .env (não hardcoded).
